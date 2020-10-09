@@ -11,7 +11,8 @@ const challenges = require('../data/datacache').challenges
 module.exports = (sequelize, { STRING, INTEGER }) => {
   const Feedback = sequelize.define('Feedback', {
     comment: {
-      type: STRING,
+      type: STRING
+      /*,
       set (comment) {
         let sanitizedComment
         if (!utils.disableOnContainerEnv()) {
@@ -22,6 +23,7 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
         }
         this.setDataValue('comment', sanitizedComment)
       }
+      */
     },
     rating: {
       type: INTEGER,
